@@ -1,8 +1,9 @@
 :root{
-  --white:#FFFFFF;
+  --lighter:#ffffff;
+  --darker:#dddddd;
 }
 
-h1 {
-    border-top-style: dotted;
+body{
+  background-color:var(--lighter);
+  overflow-x:hidden;
 }
-
