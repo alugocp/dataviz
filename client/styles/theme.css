@@ -10,6 +10,7 @@ body{
   color:var(--text);
   font-family: sans-serif;
 }
-.info *{
+.info {
   color:var(--text);
+  text-align:center;
 }
