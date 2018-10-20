@@ -1,0 +1,25 @@
+@keyframes rainbow{
+  0%{
+    box-shadow:green 0px 0px var(--dist);
+  }
+  15%{
+    box-shadow:yellow 0px 0px var(--dist);
+  }
+  30%{
+    box-shadow:orange 0px 0px var(--dist);
+  }
+  50%{
+    box-shadow:red 0px 0px var(--dist);
+  }
+  65%{
+    box-shadow:purple 0px 0px var(--dist);
+  }
+  80%{
+    box-shadow:blue 0px 0px var(--dist);
+  }
+  100%{
+    box-shadow:green 0px 0px var(--dist);
+  }
+}
+
+.col-md-2
