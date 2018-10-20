@@ -3,11 +3,11 @@ var dv=new Object();
 
 // Server features
 dv.server={
-  $_SERVER:"",
+  $_SERVER:"http://localhost:2020",
   request:function(type,options,callback,error){
-    callback("Hi");// pre-server testing
-    /*json=options || {};
+    json=options || {};
     json["type"]=type;
-    $.get($_SERVER,JSON.stringify(json),callback,error);*/
+    $.get(dv.server.$_SERVER,json,callback,"text/html")
+      .fail(error);
   }
 }

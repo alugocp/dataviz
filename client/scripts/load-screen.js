@@ -17,6 +17,7 @@ dv.load={
       // failure :(
       $(".load-screen .bar")
         .text("Server is down")
+        .css("width","100%")
         .addClass("fail")
         .stop(true);
       // reset icon's src
