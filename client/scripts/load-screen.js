@@ -6,6 +6,7 @@ dv.load={
   init:function(){
     $(".load-screen .bar").animate({width:"85%"},1500);
     dv.server.request("init",null,function(data){
+      console.log(data);
       setTimeout(function(){
         // success!
         $(".load-screen .bar")
@@ -15,6 +16,7 @@ dv.load={
       },750);
     },function(){
       // failure :(
+      console.log(arguments);
       $(".load-screen .bar")
         .text("Server is down")
         .css("width","100%")

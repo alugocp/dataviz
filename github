@@ -3,4 +3,5 @@ git add .
 printf "Please add a commit message: "
 read msg
 git commit -m "$msg"
+git pull origin master
 git push origin master
