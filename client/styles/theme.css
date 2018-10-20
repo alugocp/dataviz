@@ -1,7 +1,7 @@
 :root{
   --white:#ffffff;
   --text:#9e9e9e;
-  --gray: #dddddd;
+  --light: #dddddd;
 }
 
 body{
@@ -9,4 +9,7 @@ body{
   overflow-x:hidden;
   color:var(--text);
   font-family: sans-serif;
+}
+.info *{
+  color:var(--text);
 }
