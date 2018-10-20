@@ -1,3 +1,8 @@
 :root{
   --white:#FFFFFF;
 }
+
+h1 {
+    border-top-style: dotted;
+}
+
