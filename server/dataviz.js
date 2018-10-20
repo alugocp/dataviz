@@ -1,11 +1,13 @@
 const http=require("http");
+const url=require("url");
 const port=2020;
 
 http.createServer(function(request,response){
   response.writeHead(200,{
-    "Access-Control-Allow-Origin":"*",
-    "Content-Type":"text/html"
+    "Access-Control-Allow-Origin":"*"
   });
-  response.end("Hi");
+  var json=url.parse(request.url,true).query.json;
+  console.log(json);
+  response.end("Server");
 }).listen(port);
 console.log("Dataviz server deployed");

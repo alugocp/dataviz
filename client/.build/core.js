@@ -7,7 +7,7 @@ dv.server={
   request:function(type,options,callback,error){
     json=options || {};
     json["type"]=type;
-    $.get(dv.server.$_SERVER,json,callback,"text/html")
+    $.get(dv.server.$_SERVER,"json="+JSON.stringify(json),callback)
       .fail(error);
   }
 }
