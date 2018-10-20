@@ -1,13 +1,12 @@
 :root{
-  --lighter:#ffffff;
-  --darker:#dddddd;
+  --white:#ffffff;
+  --text:#9e9e9e;
+  --gray: #dddddd;
 }
 
-<<<<<<< HEAD
-
-=======
 body{
-  background-color:var(--lighter);
+  background-color:var(--white);
   overflow-x:hidden;
+  color:var(--text);
+  font-family: sans-serif;
 }
->>>>>>> 3aef656a31367e543d151014bdb197a44d649187
