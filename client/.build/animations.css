@@ -1,24 +1,31 @@
 @keyframes rainbow{
   0%{
     box-shadow:green 0px 0px var(--dist);
+    background-color:green;
   }
   15%{
     box-shadow:yellow 0px 0px var(--dist);
+    background-color:yellow;
   }
   30%{
     box-shadow:orange 0px 0px var(--dist);
+    background-color:orange;
   }
   50%{
     box-shadow:red 0px 0px var(--dist);
+    background-color:red;
   }
   65%{
     box-shadow:purple 0px 0px var(--dist);
+    background-color:purple;
   }
   80%{
     box-shadow:blue 0px 0px var(--dist);
+    background-color:blue;
   }
   100%{
     box-shadow:green 0px 0px var(--dist);
+    background-color:green;
   }
 }
 

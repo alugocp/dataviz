@@ -1,17 +1,17 @@
 :root{
+  --light: #dddddd;
   --white:#f4faff;
   --text:#054477;
-  --light: #dddddd;
 }
 
 body{
   background-color:var(--white);
+  font-family: sans-serif;
   overflow-x:hidden;
   color:var(--text);
-  font-family: sans-serif;
 }
 
 .info {
+  text-align:right;
   color:#9ec4e2;
-  text-align:center;
 }

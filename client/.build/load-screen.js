@@ -3,7 +3,6 @@ dv.load={
   init:function(){
     $(".load-screen .bar").animate({width:"85%"},1500);
     dv.server.request("init",null,function(data){
-      console.log(data);
       dv.populate(JSON.parse(data));
       dv.nav.setToolbar();
       setTimeout(function(){
@@ -16,13 +15,16 @@ dv.load={
       },750);
     },function(){
       // failure :(
-      console.log(arguments);
+      $(".load-screen .icon")
+        .attr("src","assets/error.svg")
+        .css("box-shadow","red 0px 0px var(--dist)")
+        .css("background-color","red")
+        .css("animation-name","none");
       $(".load-screen .bar")
         .text("Server error")
         .css("width","100%")
         .addClass("fail")
         .stop(true);
-      // reset icon's src
     });
   }
 }
