@@ -1,4 +1,3 @@
-// https://www.binarytides.com/ajax-based-streaming-without-polling/
 // Incremental database loading
 dv.stream={
   access:function(source){
@@ -14,3 +13,7 @@ dv.stream={
     request.send();
   }
 }
+
+// https://www.binarytides.com/ajax-based-streaming-without-polling/
+// Mozilla GitHub: HTML5 PDF viewer
+// SheetJs GitHub: js-xlsx

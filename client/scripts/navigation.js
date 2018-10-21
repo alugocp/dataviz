@@ -10,10 +10,6 @@ dv.nav={
       else $(this).attr("src","assets/arrow-right.svg");
     })).append($("<span>"+text+"</span>").click(function(){
       dv.section($(this));
-      /*var parent=$(this).parent();
-      parent.toggleClass("open");
-      if(parent.hasClass("open")) $(this).find(".icon").attr("src","assets/arrow-down.svg");
-      else $(this).find(".icon").attr("src","assets/arrow-right.svg");*/
     }));
     return $("<div></div>").append(title)
       .append("<div class=\"sections\"></div>");
