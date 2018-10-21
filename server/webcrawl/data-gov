@@ -5,8 +5,8 @@ mkdir trash
 pushd trash > /dev/null
 
 filename="structure.txt"
-#url="https://catalog.data.gov/dataset/"
-url="http://alexlugo.net"
+url="https://catalog.data.gov/dataset/"
+#url="http://alexlugo.net"
 wget -r --spider $url &> $filename
 less $filename | grep "$url"
 
