@@ -34,7 +34,7 @@ dv.server={
   $_SERVER:"http://localhost:2020",
   request:function(type,options,callback,error){
     json=options || {};
-    json["type"]=type;
+    json.request=type;
     $.get(dv.server.$_SERVER,"json="+JSON.stringify(json),callback)
       .fail(error);
   }

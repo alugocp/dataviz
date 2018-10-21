@@ -1,13 +1,11 @@
 // Incremental database loading
 dv.stream={
-  access:function(source){
+  access:function(source,increment){
     var request=new XMLHttpRequest();
+    request.counter=0;
     request.onreadystatechange=function(){
-      if(this.readyState==4 && this.status==200){
-        console.log("All done!");
-      }else if(this.readyState>2){
-        console.log(this.responseText);
-      }
+      if(this.readyState==4 && this.status==200) increment(null);
+      else if(this.readyState>2) increment(this.responseText,this.counter++);
     }
     request.open("get",source,true);
     request.send();

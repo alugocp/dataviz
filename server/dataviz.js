@@ -14,9 +14,10 @@ function search(json){
     if(json.term) json.term=json.term.toLowerCase();
     for(k in database){
       var obj=database[k];
-      if((json.term && k.toLowerCase().includes(json.term))
-      || obj.type==json.type
-      || obj.site==json.site){
+      if((!json.term || k.toLowerCase().includes(json.term))
+      && (!json.type || obj.type==json.type)
+      && (!json.site || obj.site==json.site)
+      && (!json.visualize || obj.visualize)){
         var match=obj;
         match.name=k;
         hits.push(match);
@@ -30,8 +31,8 @@ function initialize(){
   return JSON.stringify({sites:sites,types:types,list:list});
 }
 function jsonSwitch(json){
-  if(json.type=="search") return search(json);
-  if(json.type=="init") return initialize();
+  if(json.request=="search") return search(json);
+  if(json.request=="init") return initialize();
   return "Kill, moe"
 }
 
