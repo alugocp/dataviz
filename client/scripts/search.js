@@ -11,6 +11,7 @@ dv.search={
         var results=$(".search  .results").empty();
         var json=JSON.parse(data);
         if(json.length){
+          results.append("<div class=\"matches\">"+json.length+" results</div>");
           for(k in json) results.append(
             dv.search.result(json[k])
           );

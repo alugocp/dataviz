@@ -9,11 +9,18 @@ function access(json){
 }
 function search(json){
   var hits=[];
-  if(json["term"] && typeof json["term"]=="string"){
-    json.term=json.term.toLowerCase();
+  if(json.term=="") json.term=null;
+  if(json.site=="") json.site=null;
+  if(json.type=="") json.type=null;
+  if((json.term && typeof json.term=="string")
+  || json.site || json.type){
+    if(json.term) json.term=json.term.toLowerCase();
     for(k in database){
-      if(k.toLowerCase().includes(json.term)){
-        var match=database[k];
+      var obj=database[k];
+      if((json.term && k.toLowerCase().includes(json.term))
+      || obj.type==json.type
+      || obj.site==json.site){
+        var match=obj;
         match.name=k;
         hits.push(match);
       }

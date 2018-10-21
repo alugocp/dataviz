@@ -2,6 +2,14 @@
   --light: #dddddd;
   --white:#f4faff;
   --text:#054477;
+  --copyright:#9ec4e2;
+  --header1:#1c66dd;
+  --header2:#24467c;
+  --header3456:#0b111c;
+  --header4:#0b111c;
+  --logo:#052456;
+  --background:#deecf7;
+  --search:#57a5f9;
 }
 
 body{
@@ -13,5 +21,5 @@ body{
 
 .info {
   text-align:right;
-  color:#9ec4e2;
+  color:var(--copyright);
 }

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Setup trash folder
+mkdir trash
+pushd trash > /dev/null
+
+filename="structure.txt"
+#url="https://catalog.data.gov/dataset/"
+url="http://alexlugo.net"
+wget -r --spider $url &> $filename
+less $filename | grep "$url"
+
+# Finish up
+popd > /dev/null
+rm -rf trash
+echo "All done senpai owo"

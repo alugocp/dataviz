@@ -39,11 +39,6 @@
   top:50%;
 }
 .component.load-screen .icon{
-  /*--dist:20px;
-  animation-name:rainbow;
-  animation-duration:4s;
-  animation-iteration-count:infinite;
-  box-shadow:blue 0px 0px var(--dist);*/
   box-shadow:var(--color) 0px 0px 20px;
   background-color:var(--color);
   border-radius:50%;
@@ -51,9 +46,9 @@
   width:200px;
 }
 .component.load-screen .bar{
-  text-align:center;
-  background-color:transparent;
   box-shadow:var(--color) 0px 0px 10px;
+  background-color:var(--color);
+  text-align:center;
   height:5px;
   width:1%;
 }
@@ -79,13 +74,12 @@
       <div class="col-md-2">
         <div class="component toolbar"><style>
 .toolbar{
-  color:black;
-  border-radius:25px;
-  background-color:#deecf7;
+  background-color:var(--background);
+  border-radius: 20px;
   padding:15px;
-  margin:15px;
+  margin: 30px;
+  color:black;
 }
-
 .component.toolbar .header{
   font-weight:bold;
 }
@@ -154,6 +148,12 @@
     border-radius:50%;
     height:200px;
     width:200px;
+  }
+  .component.search .results .result{
+    padding:5px;
+  }
+  .component.search .results .result:nth-child(even){
+    background-color:var(--light);
   }
 </style>
 </div>
