@@ -15,7 +15,8 @@ dv.load={
       },750);
     },function(){
       // failure :(
-      $(".load-screen .icon").attr("src","assets/error.svg");
+      $(".load-screen .icon").attr("src","assets/error.svg")
+        .css("background-color","red");
       $(".load-screen").css("--color","red");
       $(".load-screen .bar")
         .text("Server error")
