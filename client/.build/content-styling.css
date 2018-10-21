@@ -1,4 +1,15 @@
-.content h1,h2,h3,h4,h5,h6{
+.content h1{
   font-weight:bold;
-  color:blue;
+  font-family:Arial;
+  color:#1c66dd;
+}
+
+.content h2{
+  font-family:Arial;
+  color:#24467c;
+}
+
+.content h3, h4, h5, h6{
+  font-family:Arial;
+  color:#0b111c;
 }

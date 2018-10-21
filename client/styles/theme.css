@@ -1,6 +1,6 @@
 :root{
-  --white:#ffffff;
-  --text:#9e9e9e;
+  --white:#f4faff;
+  --text:#054477;
   --light: #dddddd;
 }
 
@@ -10,7 +10,8 @@ body{
   color:var(--text);
   font-family: sans-serif;
 }
+
 .info {
-  color:var(--text);
+  color:#9ec4e2;
   text-align:center;
 }
