@@ -1,16 +1,40 @@
 #!/bin/bash
 
 # Setup trash folder
-mkdir trash
-pushd trash > /dev/null
+folder="trash"
+mkdir $folder &> /dev/null
+pushd $folder > /dev/null
 
+# Setup other local files
+reject="../previous.txt"
+output="../database.mini.json"
+[ -f $reject ] || printf "" > $reject
+website="https://catalog.data.gov/dataset/"
 filename="structure.txt"
-url="https://catalog.data.gov/dataset/"
-#url="http://alexlugo.net"
-wget -r --spider $url &> $filename
-less $filename | grep "$url"
+local="page.html"
+
+# Webcrawl
+comma=0
+echo "{" > $output
+urlRegex="[a-zA-Z0-9\/\-\._?]*"
+printf "Crawling..."
+wget --spider -r -Q 500k --reject $reject $website &> $filename
+urls=(`less $filename | grep -oP "$website$urlRegex"`)
+printf "\rCrawl complete\nExtracting metadata..."
+for url in ${urls[@]}; do
+  wget $url -O $local &> /dev/null
+  echo $url >> $reject
+  json=$(node ../data-gov.js $local $url)
+  [ $? == 0 ] || { echo "An error occured in the subprocess"; exit; }
+  [ $comma == 1 ] && echo "," >> $output
+  comma=1
+  printf "\t$json" >> $output
+done
+printf "\rMetadata extraction complete\n"
+echo "" >> $output
+echo "}" >> $output
 
 # Finish up
 popd > /dev/null
-rm -rf trash
+rm -rf $folder
 echo "All done senpai owo"
