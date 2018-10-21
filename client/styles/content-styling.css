@@ -13,3 +13,23 @@
   font-family:Arial;
   color:#0b111c;
 }
+
+.content h4{
+  font-family:Arial;
+  font-style: italic;
+  color:#0b111c;
+}
+
+.content {
+   padding-top: 50px;
+   padding-right: 120px;
+   padding-bottom: 50px;
+   padding-left: 70px;
+}
+
+.col-md-2 {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
