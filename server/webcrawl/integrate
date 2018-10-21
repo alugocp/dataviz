@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+const fs=require("fs");
+var latest=JSON.parse(
+  fs.readFileSync("database.mini.json").toString()
+);
+var old="../database.yeet.json";
+var oldbois=JSON.parse(
+  fs.readFileSync(old).toString()
+);
+for(k in latest) oldbois[k]=latest[k];
+fs.writeFileSync(old,JSON.stringify(oldbois));
+console.log("Metadata integration complete");

@@ -4,9 +4,6 @@ const fs=require("fs");
 var database,sites=[],types=[];
 
 // Request response types
-function access(json){
-
-}
 function search(json){
   var hits=[];
   if(json.term=="") json.term=null;
@@ -33,7 +30,6 @@ function initialize(){
   return JSON.stringify({sites:sites,types:types,list:list});
 }
 function jsonSwitch(json){
-  if(json.type=="access") return access(json);
   if(json.type=="search") return search(json);
   if(json.type=="init") return initialize();
   return "Kill, moe"

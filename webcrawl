@@ -1,0 +1,5 @@
+#!/bin/bash
+pushd server/webcrawl > /dev/null
+./data-gov
+./integrate
+popd > /dev/null

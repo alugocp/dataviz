@@ -1,0 +1,13 @@
+{
+	"Datasets":{"data":"https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.csv","site":"data.gov","visualize":true,"type":"csv"},
+	"ZIP Code Data":{"data":"https://catalog.data.gov/dataset/zip-code-data","site":"data.gov"},
+	"ZIP Code Data":{"data":"https://catalog.data.gov/dataset/zip-code-data","site":"data.gov"},
+	"Demographic Statistics By Zip Code":{"data":"https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.csv","site":"data.gov","visualize":true,"type":"csv"},
+	"Demographic Statistics By Zip Code":{"data":"https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.csv","site":"data.gov","visualize":true,"type":"csv"},
+	"U.S. Hourly Precipitation Data":{"data":"https://www1.ncdc.noaa.gov/pub/data/cdo/samples/PRECIP_HLY_sample_csv.csv","site":"data.gov","visualize":true,"type":"csv"},
+	"U.S. Hourly Precipitation Data":{"data":"https://www1.ncdc.noaa.gov/pub/data/cdo/samples/PRECIP_HLY_sample_csv.csv","site":"data.gov","visualize":true,"type":"csv"},
+	"U.S. Hourly Precipitation Data - KMZ file for dataset":{"data":"https://catalog.data.gov/dataset/u-s-hourly-precipitation-data/resource/126aedd4-9d30-4a8f-86c4-144575762fb2","site":"data.gov"},
+	"U.S. Hourly Precipitation Data - KMZ file for dataset":{"data":"https://catalog.data.gov/dataset/u-s-hourly-precipitation-data/resource/126aedd4-9d30-4a8f-86c4-144575762fb2","site":"data.gov"},
+	"Crimes - 2001 to present":{"data":"https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv","site":"data.gov","visualize":true,"type":"csv"},
+	"Crimes - 2001 to present":{"data":"https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv","site":"data.gov","visualize":true,"type":"csv"}
+}
