@@ -1,5 +1,5 @@
 .logo{
-  color:#052456;
+  color:var(--logo);
   font-weight:bold;
   font-size:35px;
   text-align:center;

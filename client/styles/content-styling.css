@@ -1,23 +1,23 @@
 .content h1{
   font-weight:bold;
   font-family:Arial;
-  color:#1c66dd;
+  color:var(--header1);
 }
 
 .content h2{
   font-family:Arial;
-  color:#24467c;
+  color:var(--header2);
 }
 
 .content h3, h4, h5, h6{
   font-family:Arial;
-  color:#0b111c;
+  color:var(--header3456);
 }
 
 .content h4{
   font-family:Arial;
   font-style: italic;
-  color:#0b111c;
+  color:var(--header4);
 }
 
 .content {
