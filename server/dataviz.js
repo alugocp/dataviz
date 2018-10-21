@@ -7,7 +7,6 @@ http.createServer(function(request,response){
     "Access-Control-Allow-Origin":"*"
   });
   var json=url.parse(request.url,true).query.json;
-  console.log(json);
   response.end("Server");
 }).listen(port);
 console.log("Dataviz server deployed");
