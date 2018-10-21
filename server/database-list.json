@@ -1,1 +1,27 @@
-{}
+{
+  "data.gov":{
+    "link":"https://www.data.gov",
+    "description":[
+      "A government-run collection of public access databases",
+      "Pretty interesting stuff in here"
+    ]
+  },
+  "state.data.gov":{
+    "link":"https://www.data.gov/states/",
+    "description":[
+      "Like data.gov but for state-level databases"
+    ]
+  },
+  "counties.data.gov":{
+    "link":"https://www.data.gov/counties/",
+    "description":[
+      "Like state.data.gov but for counties"
+    ]
+  },
+  "cities.data.gov":{
+    "link":"https://www.data.gov/cities/",
+    "description":[
+      "You get the idea"
+    ]
+  }
+}

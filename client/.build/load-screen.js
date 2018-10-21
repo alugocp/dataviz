@@ -1,9 +1,11 @@
-
+// Load screen and startup server request
 dv.load={
   init:function(){
     $(".load-screen .bar").animate({width:"85%"},1500);
     dv.server.request("init",null,function(data){
       console.log(data);
+      dv.populate(JSON.parse(data));
+      dv.nav.setToolbar();
       setTimeout(function(){
         // success!
         $(".load-screen .bar")
@@ -16,7 +18,7 @@ dv.load={
       // failure :(
       console.log(arguments);
       $(".load-screen .bar")
-        .text("Server is down")
+        .text("Server error")
         .css("width","100%")
         .addClass("fail")
         .stop(true);

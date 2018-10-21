@@ -1,2 +1,4 @@
 #!/bin/bash
-node server/dataviz.js
+pushd server > /dev/null
+node dataviz.js
+popd > /dev/null

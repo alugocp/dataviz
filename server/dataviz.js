@@ -1,8 +1,12 @@
 const http=require("http");
 const url=require("url");
+const fs=require("fs");
 
 function jsonSwitch(json){
-  return "server";
+  if(json.type=="init") return fs.readFileSync("database-list.json");
+  //if(json.type=="search")
+  //if(json.type=="access")
+  return "Kill, moe"
 }
 
 http.createServer(function(request,response){
@@ -11,7 +15,7 @@ http.createServer(function(request,response){
   });
   var data=url.parse(request.url,true);
   if(data.query.json) try{
-    reponse.end(
+    response.end(
       jsonSwitch(JSON.parse(data.query.json))
     );
   }catch(e){
