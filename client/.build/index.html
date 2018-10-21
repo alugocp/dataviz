@@ -6,12 +6,14 @@
   <link rel="stylesheet" href="animations.css">
   <link rel="stylesheet" href="alpha-imagery.css">
   <link rel="stylesheet" href="content-styling.css">
+  <link rel="stylesheet" href="csv-styling.css">
   <script src="libs/jquery.min.js"></script>
   <script src="libs/bootstrap.min.js"></script>
   <script src="core.js"></script>
   <script src="load-screen.js"></script>
   <script src="navigation.js"></script>
   <script src="data-stream.js"></script>
+  <script src="visualization.js"></script>
   <script src="search.js"></script>
 </head>
 <body>
@@ -125,7 +127,9 @@
   <select class="datatype">
     <option value=""> -any- </option>
   </select><br>
-  <button>Search</button>
+  <input class="visualize" type="checkbox">
+  Direct data links only<br>
+  <br><button>Search</button>
 </div>
 <div class="results"></div>
 
@@ -152,8 +156,15 @@
   .component.search .results .result{
     padding:5px;
   }
+  .component.search .results.visualize{
+    border:solid 2px var(--header1);
+    overflow-x:scroll;
+  }
   .component.search .results .result:nth-child(even){
-    background-color:var(--light);
+    background-color:var(--search);
+  }
+  .component.search .iconified img{
+    margin-right:5px;
   }
 </style>
 </div>

@@ -11,7 +11,9 @@
   <select class="datatype">
     <option value=""> -any- </option>
   </select><br>
-  <button>Search</button>
+  <input class="visualize" type="checkbox" />
+  Direct data links only<br>
+  <br><button>Search</button>
 </div>
 <div class="results"></div>
 
@@ -38,7 +40,14 @@
   .results .result{
     padding:5px;
   }
+  .results.visualize{
+    border:solid 2px var(--header1);
+    overflow-x:scroll;
+  }
   .results .result:nth-child(even){
-    background-color:var(--light);
+    background-color:var(--search);
+  }
+  .iconified img{
+    margin-right:5px;
   }
 </style>
