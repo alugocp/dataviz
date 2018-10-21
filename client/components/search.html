@@ -1,14 +1,17 @@
 <h1>Search</h1>
-<h2>Filters</h2>
 <div class="filters">
-  <input type="text" class="name">
+  <h2>Filters</h2>
+  <span>Term:</span>
+  <input type="text" class="name"><br>
+  <span>Source:</span>
   <select class="website">
-    <option value="all"> --- </option>
-  </select>
+    <option value=""> -any- </option>
+  </select><br>
+  <span>Datatype:</span>
   <select class="datatype">
-    <option value="all"> --- </option>
-  </select>
-  <button name="button"></button>
+    <option value=""> -any- </option>
+  </select><br>
+  <button>Search</button>
 </div>
 <div class="results"></div>
 
@@ -17,5 +20,19 @@
     background-color:var(--light);
     border-radius:35px;
     padding:25px;
+  }
+  .results{
+    margin-top:25px;
+    text-align:left;
+  }
+  .results.fail{
+    text-align:center;
+  }
+  .results.fail img{
+    box-shadow:red 0px 0px 15px;
+    background-color:red;
+    border-radius:50%;
+    height:200px;
+    width:200px;
   }
 </style>
