@@ -3,7 +3,6 @@ dv.load={
   init:function(){
     $(".load-screen .bar").animate({width:"85%"},1500);
     dv.server.request("init",null,function(data){
-      console.log(data);
       dv.populate(JSON.parse(data));
       dv.nav.setToolbar();
       setTimeout(function(){
